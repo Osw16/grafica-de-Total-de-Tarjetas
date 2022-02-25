@@ -118,6 +118,7 @@ d3.csv("cardsum.csv", function(d, i, columns) {
   yTick.append("text")
       .attr("y", function(d) { return -y(d); })
       .attr("dy", "0.35em")
+      .attr("fill", "black")
       .style("font-size", 20)
       .text(y.tickFormat(5, "s"));
 
@@ -127,6 +128,7 @@ d3.csv("cardsum.csv", function(d, i, columns) {
     .enter().append("g")
     .style("font-size", 25)
     .attr("stroke", "#7e7e7e")
+    .attr("fill", "black")
     .attr("text-anchor", "start")
     .attr("transform", function(d) { return "rotate(" + ((x(d.State) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")translate(" + 150 + ",0)"; })
 
@@ -138,6 +140,7 @@ d3.csv("cardsum.csv", function(d, i, columns) {
     .enter().append("g")
     .style("font-size", 25)
           .attr("stroke", "#7e7e7e")
+          .attr("fill", "black")
       .attr("stroke-width", 1)
     .attr("text-anchor", "end")
     .attr("transform", function(d) { return "rotate(" + ((x(d.State) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")translate(" + 150 + ",0)"; });
@@ -167,6 +170,7 @@ yTick.append("text")
       .attr("transform", function(d) { return (x(d.State) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) < Math.PI ? "rotate(10)translate(0,16)" : "rotate(-120)translate(0,-19)"; })
       .attr("y", function(d) { return -y(d); })
       .attr("dy", "1.35em")
+      .attr("fill", "black")
       .style("font-size", 20)
       .text(y.tickFormat(5, "s"));
 
@@ -192,6 +196,7 @@ yTick.append("text")
       .attr("transform", function(d) { return (x(d.State) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) < Math.PI ? "rotate(10)translate(0,16)" : "rotate(-240)translate(0,-19)"; })
       .attr("y", function(d) { return -y(d); })
       .attr("dy", "1.35em")
+      .attr("fill", "black")
       .style("font-size", 20)
       .text(y.tickFormat(5, "s"));
 
